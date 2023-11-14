@@ -1,0 +1,29 @@
+//백준 배열 6번
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n, m;
+		n = sc.nextInt();
+		m = sc.nextInt();
+		int basket[] = new int[n];
+		
+		for(int i = 0; i < n; i++) {
+			basket[i] = i+1;
+		}
+		for(int i = 0; i < m; i++) {
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			int tmp = basket[a-1];
+			basket[a-1] = basket[b-1];
+			basket[b-1] = tmp;
+		}
+		for(int i = 0; i < n; i++) {
+			System.out.print(basket[i]);
+			System.out.print(" ");
+		}
+		sc.close();
+	}
+}
