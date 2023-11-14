@@ -1,0 +1,27 @@
+//백준 배열 5단계
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n, m, i, j, k;
+		int basket[];
+		
+		n = sc.nextInt();
+		m = sc.nextInt();
+		basket = new int[n];
+		for(int a = 1; a <= m; a++) {
+			i = sc.nextInt();
+			j = sc.nextInt();
+			k = sc.nextInt();
+			for(int b = i - 1; b <= j - 1; b++) {
+				basket[b] = k;
+			}
+		}
+		for(int c = 0; c < n; c++) {
+			System.out.print(basket[c]);
+			System.out.print(" ");
+		}
+	}
+}
